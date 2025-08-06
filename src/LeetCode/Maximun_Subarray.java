@@ -9,15 +9,13 @@ public class Maximun_Subarray {
     public static void maxSubArray(int [] arr){
         int n=arr.length;
         int ans=Integer.MIN_VALUE;
+        int sum=0;
         for(int i=0;i<n;i++){
-            int sum=0;
-            for(int j=i;j<n;j++){
-                sum+=arr[j];
+                sum+=arr[i];
                 ans=Math.max(ans,sum);
                 if(sum<=0){
                     sum=0;
                 }
-            }
         }
         System.out.println(ans);
     }
